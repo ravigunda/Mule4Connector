@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:justride="http://www.mulesoft.org/schema/mule/justride" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/justride http://www.mulesoft.org/schema/mule/justride/current/mule-justride.xsd">
+	<justride:config name="Justride_Config" doc:name="Justride Config" doc:id="57ed5239-1bf7-4b81-8dec-bfdcbc4c7214" configId="2" >
+		<justride:connection requiredParameter="1" />
+	</justride:config>
+	<justride:config name="Justride_Config1" doc:name="Justride Config" doc:id="7d96f054-d2c4-4ca8-a88c-3e4ea5d76d88" configId="1" >
+		<justride:connection token="JWE eyJlbmMiOiJBMTI4R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.PaiRYRlueQskAZS7UfNHxjcY8B0BFJi6tTlE21QWYKjFWYSfHH0st6LdCo3C2wR8YHLjfyqJJGc3uOI64xg8aw.U_FEhKlKRMp5a0V4.qJVFDFGrcRoDszweHubxC00jZROpYP1JFU3CtyCgwdlruurFIUrmFruoVZQwjVb3CCrK_XdA1iZOPbEiGQTUBRxuEH-Zg1o3UFrDjGuZpY-OF8WxAJRlpyNCeTyADWuX0FQwdoSHyywqdR4LzseARF2Sf2YCdbJYLL3a8r8zXzdaTvAmMAyvMBruIiEMNfMp8u8B3F5GM4in86fQFE9xm8N8HuJyziqtRbwr1XhHYTOydHtvd4TU8fks5spnS5ywxBg-vLQhptLDj5jHA0kKFFB9j_tU4QY.ibVIH566zBnDVvVY9xZcJQ" apiUri="https://uat.justride.systems/trs/api/v1/bbtLON/tickets/reference/6daf4228-06af-4b2b-a6f7-30fe162f74d0.json" />
+	</justride:config>
+	<flow name="justride-demoFlow" doc:id="14de7870-77af-4391-b66a-171e18fdab01" >
+		<justride:retrieve-info doc:name="Retrieve info" doc:id="5afda05d-e9e5-4a9f-b364-7251d031ac43" config-ref="Justride_Config1"/>
+	</flow>
+</mule>
