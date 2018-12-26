@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:justride="http://www.mulesoft.org/schema/mule/justride"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/justride http://www.mulesoft.org/schema/mule/justride/current/mule-justride.xsd">
+
+    <justride:config name="config" configId="configId">
+        <justride:connection requiredParameter="aValue" />
+    </justride:config>
+
+    <flow name="sayHiFlow">
+        <justride:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <justride:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>
